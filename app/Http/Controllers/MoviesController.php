@@ -13,4 +13,8 @@ class MoviesController extends Controller
         $movies = Movie::orderBy('title')->get();
         return view('movies', compact('movies'));
     }
+
+    public function show(Movie $movie, Request $request) {
+        return view('movie', compact('movie'));
+    }
 }
